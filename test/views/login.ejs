@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
+    <title>Log-in</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            background-color: darkgray;
+        }
+
+        #log_in {
+            width: 600px;
+            height: 700px;
+            margin: 150px auto;
+            text-align: center;
+            border: 4px solid;
+            border-radius: 20px;
+            position: relative;
+            left: -20px;
+        }
+
+        img {
+            width: 20px;
+        }
+
+        /* ==============공통 부분========================================= */
+
+        h1 {
+            position: absolute;
+            top: 50px;
+            left: 170px;
+            font-size: 100px;
+            border-radius: 20px;
+            color: azure;
+        }
+
+        h1 a {
+            color: azure;
+        }
+
+        form {
+            position: relative;
+            top: 150px;
+        }
+
+        form div {
+            position: absolute;
+            top: 30px;
+            left: 190px;
+            font-size: 30px;
+            font-weight: bold;
+            border: 3px solid rgb(73, 81, 81);
+            width: 200px;
+            line-height: 64px;
+            border-radius: 20px;
+            background-color: rgb(73, 81, 81);
+            color: aliceblue;
+        }
+
+        /* ==========================큰 로그인 버튼(메인페이지 복귀버튼)완료=========== */
+        ul li:first-child,
+        ul li:nth-child(2) {
+            position: absolute;
+            line-height: 40px;
+            border: 1px solid gray;
+            width: 350px;
+            text-align: left;
+            border-radius: 10px;
+        }
+
+        ul li:first-child {
+            top: 150px;
+            left: 130px;
+        }
+
+        ul li:nth-child(2) {
+            top: 230px;
+            left: 130px;
+        }
+
+        #pw_input ul li:first-child img,
+        ul li:nth-child(2) img {
+            margin-top: 10px;
+            width: 30px;
+        }
+
+        ul li:first-child input,
+        ul li:nth-child(2) input {
+            height: 55px;
+            width: 300px;
+            border: 1px solid darkgray;
+            text-align: left;
+        }
+
+
+        ul li:first-child input::placeholder,
+        ul li:nth-child(2) input::placeholder {
+            font-weight: bolder;
+            font-size: medium;
+        }
+
+        ul li:last-child {
+            position: absolute;
+            top: 329px;
+            left: 210px;
+            font-size: 18px;
+        }
+
+        ul li:last-child img {
+            width: 30px;
+            vertical-align: middle;
+        }
+
+        button {
+            position: absolute;
+            bottom: -430px;
+            right: 250px;
+            width: 100px;
+            height: 40px;
+            border: 3px solid rgb(73, 81, 81);
+            font-size: larger;
+            font-weight: 800;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            transition: 0.6s linear;
+            background-color: rgb(255, 255, 255);
+            color: rgb(75, 30, 45);
+            cursor: pointer;
+        }
+
+        div:last-child {
+            line-height: 70px;
+            position: absolute;
+            bottom: 20px;
+            left: 130px;
+
+        }
+
+        .information a {
+            margin: 0px 20px;
+            color: rgb(12, 12, 13);
+        }
+
+        .information a:hover {
+            color: fuchsia;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="log_in">
+        <form name="log_in">
+            <div>로그인</div>
+            <ul>
+                <li>
+                    <img src="./login_img/id.png" alt="id">
+                    <input type="text" placeholder="id를 입력하세요" required>
+                </li>
+                <li>
+                    <img src="./login_img/id.png" alt="p.w">
+                    <input type="password" placeholder="비밀번호를 입력하세요" required>
+                </li>
+                <li>
+                    <img src="./login_img/check.png" alt="">
+                    <input type="checkbox" name="checked" id="checked">
+                    <label for="checked">아이디 저장</label>
+                </li>
+            </ul>
+            <button type="submit">로그인</button>
+        </form>
+        <div class="information">
+            <a href="#">아이디 / 비밀번호 찾기</a>
+            <a href="/signin">회원 가입</a>
+        </div>
+    </div>
+</body>
+
+</html>

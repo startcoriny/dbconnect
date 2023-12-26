@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            margin: 100px auto;
+            width: 400px;
+            height: 700px;
+            line-height: 40px;
+        }
+
+        form legend {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        p {
+            width: 300px;
+            height: 150px;
+            overflow: auto;
+            border: 1px solid;
+            line-height: 25px;
+        }
+
+        fieldset {
+            border: #ffffff;
+            width: 460px;
+            height: 250px;
+        }
+
+        .name {
+            border: none;
+            border-radius: 10px;
+            width: 65px;
+            margin-left: 20px;
+            color: brown;
+
+        }
+
+        .name:not(:hover) {
+            opacity: 0.8;
+            /* transition: 0.3s; */
+        }
+
+        .name:hover {
+            opacity: 1;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="/addmember" method="post">
+        <fieldset>
+            <legend>회원가입</legend>
+            <div>
+                <label for="id"><strong>ID :</strong></label required>
+                <input type="text" name="id" id="id">
+            </div>
+            <div>
+                <label for="name"><strong>NAME :</strong></label required>
+                <input type="text" name="name" id="name">
+            </div>
+
+
+    <div>
+                <label for="email"><strong>email : </strong>
+                    <input type="text" name="email" id="email" size="35" minlength="8" maxlength="13"
+                        placeholder="이메일작성" required>
+                </label>
+            </div>
+            <div>
+                <label for="password"><strong>PASSWORD :</strong>
+                    <input type="password" name="password" id="password" size="35" minlength="8" maxlength="13"
+                        placeholder="특수문자, 영문, 숫자 포함 8개이상 13개이하" required>
+                </label>
+            </div>
+        </fieldset>
+
+        <button type="submit">회원가입</button>
+    </form>
+
+</body>
+
+</html>
