@@ -160,19 +160,18 @@
 
 <body>
     <div id="log_in">
-        <form name="log_in">
+        <form name="log_in" action="/login" method="post">
             <div>로그인</div>
             <ul>
                 <li>
-                    <img src="./login_img/id.png" alt="id">
-                    <input type="text" placeholder="id를 입력하세요" required>
+                    id : 
+                    <input type="text" placeholder="id를 입력하세요" name="id" required>
                 </li>
                 <li>
-                    <img src="./login_img/id.png" alt="p.w">
-                    <input type="password" placeholder="비밀번호를 입력하세요" required>
+                    pw : 
+                    <input type="password" name="password" placeholder="비밀번호를 입력하세요" required>
                 </li>
                 <li>
-                    <img src="./login_img/check.png" alt="">
                     <input type="checkbox" name="checked" id="checked">
                     <label for="checked">아이디 저장</label>
                 </li>

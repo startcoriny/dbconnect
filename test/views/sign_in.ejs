@@ -63,7 +63,7 @@
 
 <body>
 
-    <form action="/addmember" method="post">
+    <form id="registrationForm" action="/addmember" method="post">
         <fieldset>
             <legend>회원가입</legend>
             <div>
@@ -76,7 +76,7 @@
             </div>
 
 
-    <div>
+            <div>
                 <label for="email"><strong>email : </strong>
                     <input type="text" name="email" id="email" size="35" minlength="8" maxlength="13"
                         placeholder="이메일작성" required>
@@ -92,7 +92,6 @@
 
         <button type="submit">회원가입</button>
     </form>
-
 </body>
 
 </html>
